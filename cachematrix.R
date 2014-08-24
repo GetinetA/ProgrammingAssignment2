@@ -55,7 +55,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## returned by makeCacheMatrix function. If the inverse has already 
 ## been calculated and the matrix has not changed, then this function 
 ## retrieve the inverse from cache.The parameter is checked if it is 
-## a valid list object returned by makeCacheMatrix
+## a valid list object returned by makeCacheMatrix function
 ##
 ## @param: a list object, that is returned by makeCacheMatrix function
 ## @return: returns the mean of the special matrix object
@@ -76,8 +76,8 @@ cacheSolve <- function(x, ...) {
       				x$setInverse(invMatrix)
       				return(invMatrix)
     			} else {
-    			    message("Matrix object of passed parameter is empty.")
-              message("First set matrix value using 'set' function.")
+    			    message("Matrix object of argument passed is empty.")
+					message("First set matrix value using 'set' function.")
     			}
       } else{
           message("Please pass a valid makeCacheMatrix object.")
